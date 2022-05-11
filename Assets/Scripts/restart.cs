@@ -17,6 +17,7 @@ public class restart : MonoBehaviour
         
     }
     public void ResetScene()
+    //valitun napin valikosta löytyy on-click-valikko johon valitsette tämän funktion eli 'ResetScene'
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
