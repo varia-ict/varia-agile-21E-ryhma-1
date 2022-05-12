@@ -14,7 +14,11 @@ public class PlayerController : MonoBehaviour
     public float valueY;
    
     public bool go;
+    public bool heightSet = false;
     public bool launched = false;
+
+    public int heightLevel;
+    public float tempPos;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +31,31 @@ public class PlayerController : MonoBehaviour
     {
         StatusCheck();
         GetValues();
+    }
+
+    // Function will set the bird launching height in the range of three levels
+    private void SetHeight()
+    {
+        if (!launched && !heightSet)
+        {
+            Debug.Log("Nakki");
+            switch (heightLevel)
+            {
+                case 1:
+                    transform.position = new Vector3(0f, 0.22f, 0f);
+                    break;
+                case 2:
+                    transform.position = new Vector3(0f, 3.60f, 0f);
+                    break;
+                case 3:
+                    transform.position = new Vector3(0f, 6.70f, 0f);
+                    break;
+                default:
+                    transform.position = new Vector3(0f, 0.22f, 0f);
+                    break;
+            }
+            heightSet = true;
+        }
     }
 
     // If statement for the LaunchBird function to be executed once Bool values are set to True and False
@@ -47,6 +76,9 @@ public class PlayerController : MonoBehaviour
 
         valueX = XYvalueLauncherScript.xNumber;
         valueY = XYvalueLauncherScript.yNumber;
+
+        heightLevel = XYvalueLauncherScript.heightNumber;
+
         go = XYvalueLauncherScript.active;
     }
 
@@ -63,6 +95,7 @@ public class PlayerController : MonoBehaviour
     // Countdown for the launch of the Object (Bird) then executes the function "LaunchBird" and sets Bool (launched) to true
     IEnumerator Countdown3()
     {
+        SetHeight();
         yield return new WaitForSeconds(3);
         LaunchBird();
         launched = true;
