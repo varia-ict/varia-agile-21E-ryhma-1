@@ -8,6 +8,7 @@ public class XYvalueLauncher : MonoBehaviour
 {
     public InputField xValueField;
     public InputField yValueField;
+    public InputField heightField;
     
     public TextMeshProUGUI xValueUsed;
     public TextMeshProUGUI yValueUsed;
@@ -17,6 +18,9 @@ public class XYvalueLauncher : MonoBehaviour
 
     public float xNumber;
     public float yNumber;
+
+    public string heightValue;
+    public int heightNumber;
 
     public bool active = false;
 
@@ -37,6 +41,11 @@ public class XYvalueLauncher : MonoBehaviour
     {
         xValue = xValueField.text;
         yValue = yValueField.text;
+
+        heightValue = heightField.text;
+
+        //heightNumber = float.Parse(heightValue);
+        heightNumber = int.Parse(heightValue);
 
         xNumber = int.Parse(xValue);
         yNumber = int.Parse(yValue);
