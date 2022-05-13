@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.3585431, g: 0.38177535, b: 0.64660245, a: 1}
+  m_IndirectSpecularColor: {r: 0.3585434, g: 0.3817764, b: 0.64660275, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2653,7 +2653,7 @@ MeshCollider:
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  m_Mesh: {fileID: 4300000, guid: 9f8cb4e6b3b62584ea4a63cbd36d4261, type: 3}
 --- !u!1 &357442627
 GameObject:
   m_ObjectHideFlags: 0
@@ -4709,7 +4709,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &654652175
 PrefabInstance:
@@ -6400,7 +6400,7 @@ MeshCollider:
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  m_Mesh: {fileID: 4300000, guid: 9f8cb4e6b3b62584ea4a63cbd36d4261, type: 3}
 --- !u!1001 &829959194
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10166,7 +10166,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6812971398419303582, guid: 2b37a7567864690489cade1e23e75265, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6812971398419303582, guid: 2b37a7567864690489cade1e23e75265, type: 3}
       propertyPath: m_LocalPosition.x
