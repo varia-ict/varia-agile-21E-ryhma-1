@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private XYvalueLauncher XYvalueLauncherScript;
+    private BranchRemove branchRemoveScript;
     
     private Rigidbody rb;
     
@@ -20,6 +21,12 @@ public class PlayerController : MonoBehaviour
     public int heightLevel;
     public float tempPos;
 
+    private GameObject treeBranch;
+    private BoxCollider treeCollider;
+
+    public bool collidersOff = false;
+    public bool collidersAreOff;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +39,8 @@ public class PlayerController : MonoBehaviour
         StatusCheck();
         GetValues();
     }
+
+
 
     // Function will set the bird launching height in the range of three levels
     private void SetHeight()
@@ -67,12 +76,13 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    // Setup for the valuse fetched from the XYvalueLauncherScript and setups RigidBody for the object to be launched
+    // Setup for the valuse fetched from the XYvalueLauncherScript and setups RigidBody for the object to be launched /Also fetches Colliders for tree
     private void GetValues()
     {
         rb = GetComponent<Rigidbody>();
 
         XYvalueLauncherScript = GameObject.Find("xyInputInjector").GetComponent<XYvalueLauncher>();
+        branchRemoveScript = GameObject.Find("tree_trunk").GetComponent<BranchRemove>();
 
         valueX = XYvalueLauncherScript.xNumber;
         valueY = XYvalueLauncherScript.yNumber;
@@ -80,6 +90,8 @@ public class PlayerController : MonoBehaviour
         heightLevel = XYvalueLauncherScript.heightNumber;
 
         go = XYvalueLauncherScript.active;
+
+        collidersAreOff = branchRemoveScript.collidersAreOff;
     }
 
     // Satus checker for the Boolean "Go" and initiation for the StartCoroutine Countdown
@@ -97,8 +109,12 @@ public class PlayerController : MonoBehaviour
     {
         SetHeight();
         yield return new WaitForSeconds(3);
-        LaunchBird();
-        launched = true;
+        collidersOff = true;
+        if (collidersAreOff)
+        {
+            LaunchBird();
+            launched = true;
+        }
         Debug.Log("Launch");
         if (go) Debug.Log("true");
         yield break;
