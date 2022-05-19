@@ -2972,6 +2972,8 @@ MonoBehaviour:
   launched: 0
   heightLevel: 0
   tempPos: 0
+  collidersOff: 0
+  collidersAreOff: 0
 --- !u!1 &370064771
 GameObject:
   m_ObjectHideFlags: 0
@@ -9897,6 +9899,8 @@ MonoBehaviour:
   launched: 0
   heightLevel: 0
   tempPos: 0
+  collidersOff: 0
+  collidersAreOff: 0
 --- !u!65 &1195435584
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9926,6 +9930,37 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 56
   m_CollisionDetection: 1
+--- !u!114 &1195435586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1195435582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3522db7d13dd2e49acb4082aba34b0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &1195435587
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1195435582}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f74e5ebbb33c88c47af61d1e05e16596, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1201321245
 GameObject:
   m_ObjectHideFlags: 0
