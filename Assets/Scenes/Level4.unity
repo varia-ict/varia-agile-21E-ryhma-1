@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.3585424, g: 0.3817751, b: 0.6466018, a: 1}
+  m_IndirectSpecularColor: {r: 0.3585431, g: 0.38177535, b: 0.64660245, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -591,6 +591,9 @@ MonoBehaviour:
   launched: 0
   heightLevel: 0
   tempPos: 0
+  collidersOff: 0
+  collidersAreOff: 0
+  gameWin: 0
 --- !u!1001 &73889532
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13673,3 +13676,60 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6dbabfd6d3c8cb47b7243b0b8723af2, type: 3}
+--- !u!1001 &2339304176391918951
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2881276526392806685, guid: 1a6eb692af2eddd47ac1e2d2d2894343, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2881276526392806685, guid: 1a6eb692af2eddd47ac1e2d2d2894343, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 141.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 2881276526392806685, guid: 1a6eb692af2eddd47ac1e2d2d2894343, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -9.81
+      objectReference: {fileID: 0}
+    - target: {fileID: 2881276526392806685, guid: 1a6eb692af2eddd47ac1e2d2d2894343, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2881276526392806685, guid: 1a6eb692af2eddd47ac1e2d2d2894343, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2881276526392806685, guid: 1a6eb692af2eddd47ac1e2d2d2894343, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2881276526392806685, guid: 1a6eb692af2eddd47ac1e2d2d2894343, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2881276526392806685, guid: 1a6eb692af2eddd47ac1e2d2d2894343, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2881276526392806685, guid: 1a6eb692af2eddd47ac1e2d2d2894343, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2881276526392806685, guid: 1a6eb692af2eddd47ac1e2d2d2894343, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 2881276526392806685, guid: 1a6eb692af2eddd47ac1e2d2d2894343, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3222194763270772647, guid: 1a6eb692af2eddd47ac1e2d2d2894343, type: 3}
+      propertyPath: m_Name
+      value: pinkwormo
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1a6eb692af2eddd47ac1e2d2d2894343, type: 3}

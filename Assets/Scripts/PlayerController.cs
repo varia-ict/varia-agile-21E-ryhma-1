@@ -27,6 +27,8 @@ public class PlayerController : MonoBehaviour
     public bool collidersOff = false;
     public bool collidersAreOff;
 
+    public bool gameWin = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -119,5 +121,13 @@ public class PlayerController : MonoBehaviour
         if (go) Debug.Log("true");
         yield break;
 
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Worm")
+        {
+            gameWin = true;
+        }
     }
 }
