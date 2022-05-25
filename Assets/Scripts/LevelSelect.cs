@@ -17,6 +17,8 @@ public class LevelSelect : MonoBehaviour
     {
         
     }
+    //LoadScene laitetaan osaksi MainMenuta ja main menu kiinnitet‰‰n nappien osaksi, jolloin napin toiminnoksi klikatessa se siirt‰‰
+    //alla olevaan funktioon tason nimen 
     public void LoadScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);

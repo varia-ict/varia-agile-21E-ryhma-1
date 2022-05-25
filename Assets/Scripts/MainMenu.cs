@@ -18,6 +18,7 @@ public class MainMenu : MonoBehaviour
     }
     public void PlayGame()
     {
+        //t‰m‰ funktio lis‰‰ aktiivisen kohtauksen indeksiin yhden ja next level/start game nappi toimii silloin
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
     }

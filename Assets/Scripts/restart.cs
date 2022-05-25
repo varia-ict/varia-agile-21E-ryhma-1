@@ -16,6 +16,7 @@ public class restart : MonoBehaviour
     {
         
     }
+    //ResetScene lisätään nappiin tai muuhun ehtoon
     public void ResetScene()
     //valitun napin valikosta löytyy on-click-valikko johon valitsette tämän funktion eli 'ResetScene'
     {
