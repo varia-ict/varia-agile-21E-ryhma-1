@@ -30,6 +30,8 @@ public class PlayerController : MonoBehaviour
     public bool collidersAreOff;
 
     public bool gameWin = false;
+    public bool moving = false;
+    public bool hasStopped = false;
 
     // Start is called before the first frame update
     void Start()
@@ -43,6 +45,7 @@ public class PlayerController : MonoBehaviour
         StatusCheck();
         GetValues();
         OutOfBounds();
+        IsMoving();
     }
 
 
@@ -136,9 +139,37 @@ public class PlayerController : MonoBehaviour
 
     private void OutOfBounds() // Restarts if player is out of Bounds
     {
-        if (player.transform.position.y <= -20.0f || player.transform.position.x >= 260)
+        if (player.transform.position.y <= -20.0f || player.transform.position.x >= 260 || player.transform.position.y >= 120.0f)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
+    }
+
+    private void IsMoving()
+    {
+        speed = rb.velocity.magnitude;
+        if(speed >= 1 && launched)
+        {
+            moving = true;
+        }
+        if (moving)
+        {
+            if(speed <= 0.1f)
+            {
+                StartCoroutine("CountdownForStop");
+                Debug.Log("Movement Halted");
+            }
+        }
+    }
+    IEnumerator CountdownForStop()
+    {
+        yield return new WaitForSeconds(2);
+        if(speed < 0.01f)
+        {
+            // Insert the Restart or to menu
+            Debug.Log("You have failed us, you are a failure!");
+        }
+        
+        yield break;
     }
 }
