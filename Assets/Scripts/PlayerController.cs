@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class PlayerController : MonoBehaviour
     public int heightLevel;
     public float tempPos;
 
+    private GameObject player;
     private GameObject treeBranch;
     private BoxCollider treeCollider;
 
@@ -40,6 +42,7 @@ public class PlayerController : MonoBehaviour
     {
         StatusCheck();
         GetValues();
+        OutOfBounds();
     }
 
 
@@ -82,10 +85,10 @@ public class PlayerController : MonoBehaviour
     private void GetValues()
     {
         rb = GetComponent<Rigidbody>();
-
+        player = GameObject.FindGameObjectWithTag("Player");
         XYvalueLauncherScript = GameObject.Find("xyInputInjector").GetComponent<XYvalueLauncher>();
         branchRemoveScript = GameObject.Find("tree_trunk").GetComponent<BranchRemove>();
-
+        
         valueX = XYvalueLauncherScript.xNumber;
         valueY = XYvalueLauncherScript.yNumber;
 
@@ -123,11 +126,19 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other) // Collider for hitting the worm to set a trigger effects
     {
         if (other.gameObject.tag == "Worm")
         {
             gameWin = true;
+        }
+    }
+
+    private void OutOfBounds() // Restarts if player is out of Bounds
+    {
+        if (player.transform.position.y <= -20.0f || player.transform.position.x >= 260)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 }
