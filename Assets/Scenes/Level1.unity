@@ -11611,9 +11611,9 @@ Transform:
   - {fileID: 1520486008}
   - {fileID: 757185766}
   - {fileID: 1302835496}
+  - {fileID: 1340149234}
   - {fileID: 1342870964}
   - {fileID: 1975386180}
-  - {fileID: 1340149234}
   - {fileID: 648096603}
   - {fileID: 818029588}
   - {fileID: 1110621870}
@@ -19464,7 +19464,7 @@ Transform:
   - {fileID: 42556688}
   - {fileID: 1950654265}
   m_Father: {fileID: 822918200}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1342870964 stripped
 Transform:
@@ -23741,6 +23741,61 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 56
   m_CollisionDetection: 1
+--- !u!114 &1615229243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1615229240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3522db7d13dd2e49acb4082aba34b0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  launched: 0
+--- !u!95 &1615229244
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1615229240}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f74e5ebbb33c88c47af61d1e05e16596, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1615229245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1615229240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ebaafea5aacc5f4c9523cc71474771e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  valueX: 0
+  valueY: 0
+  go: 0
+  heightSet: 0
+  launched: 0
+  heightLevel: 0
+  tempPos: 0
+  collidersOff: 0
+  collidersAreOff: 0
+  gameWin: 0
 --- !u!1001 &1618464361
 PrefabInstance:
   m_ObjectHideFlags: 0
