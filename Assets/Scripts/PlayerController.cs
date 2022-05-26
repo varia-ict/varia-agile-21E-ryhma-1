@@ -33,6 +33,8 @@ public class PlayerController : MonoBehaviour
     public bool moving = false;
     public bool hasStopped = false;
 
+    public GameObject menuRestart;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -100,6 +102,8 @@ public class PlayerController : MonoBehaviour
         go = XYvalueLauncherScript.active;
 
         collidersAreOff = branchRemoveScript.collidersAreOff;
+
+        //menuRestart = GameObject.Find("MenuCanvas");
     }
 
     // Satus checker for the Boolean "Go" and initiation for the StartCoroutine Countdown
@@ -134,6 +138,7 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.tag == "Worm")
         {
             gameWin = true;
+            menuRestart.SetActive(true);
         }
     }
 
@@ -141,7 +146,8 @@ public class PlayerController : MonoBehaviour
     {
         if (player.transform.position.y <= -20.0f || player.transform.position.x >= 260 || player.transform.position.y >= 120.0f)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            menuRestart.SetActive(true);
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 
@@ -166,7 +172,7 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(2);
         if(speed < 0.01f)
         {
-            // Insert the Restart or to menu
+            menuRestart.SetActive(true);
             Debug.Log("You have failed us, you are a failure!");
         }
         
