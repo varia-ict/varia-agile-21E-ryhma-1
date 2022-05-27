@@ -25,7 +25,7 @@ public class BranchRemove : MonoBehaviour
         BoolUpdate();
     }
 
-    private void BoolUpdate()
+    private void BoolUpdate() // Finds player with tag also fetches the Script where to get the Boll value
     {
         // playerControllerScript = GameObject.Find("testbird2").GetComponent<PlayerController>();
         player = GameObject.FindWithTag("Player");
@@ -36,7 +36,7 @@ public class BranchRemove : MonoBehaviour
 
         // treeCollider = GetComponent<BoxCollider>();
         
-        if (collidersOff)
+        if (collidersOff) // Once fetched Bool is set to true, Collider(EmptyGameObject)Group will be turned off
         {
             treeColliders.SetActive(false);
             collidersAreOff = true;

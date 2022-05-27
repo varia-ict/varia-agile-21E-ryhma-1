@@ -26,7 +26,7 @@ public class CameraFollow : MonoBehaviour
         StatusChecker();
     }
 
-    // Fetches the information for Tags and camera position
+    // Fetches the information for Tags and camera position for the start
     void SetupStart()
     {
         player = GameObject.FindWithTag("Player");

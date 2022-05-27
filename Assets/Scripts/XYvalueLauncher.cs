@@ -49,11 +49,11 @@ public class XYvalueLauncher : MonoBehaviour
 
         xNumber = int.Parse(xValue);
         yNumber = int.Parse(yValue);
-
+        // Also prints on Canvas the values you have used
         xValueUsed.text = "X Value: " + xNumber;
         yValueUsed.text = "Y Value: " + yNumber;
 
-
+        // With these if statements the game requires you to input at least one (1) value over 0
         if (xNumber > 0 || yNumber > 0)
         {
             active = true;

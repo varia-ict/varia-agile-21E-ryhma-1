@@ -122,7 +122,7 @@ public class PlayerController : MonoBehaviour
         SetHeight();
         yield return new WaitForSeconds(3);
         collidersOff = true;
-        if (collidersAreOff)
+        if (collidersAreOff) //Extra Boolean check necessary for a proper sequence for execution of lines
         {
             LaunchBird();
             launched = true;
@@ -146,12 +146,12 @@ public class PlayerController : MonoBehaviour
     {
         if (player.transform.position.y <= -20.0f || player.transform.position.x >= 260 || player.transform.position.y >= 120.0f)
         {
-            menuRestart.SetActive(true);
+            menuRestart.SetActive(true); // Changed Restart to the Canvas opening for option to Menu/Restart
             //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 
-    private void IsMoving()
+    private void IsMoving() //a lenghty check for movement, once the player moves more than X & Bool true continues to the next line
     {
         speed = rb.velocity.magnitude;
         if(speed >= 1 && launched)
@@ -160,14 +160,14 @@ public class PlayerController : MonoBehaviour
         }
         if (moving)
         {
-            if(speed <= 0.1f)
+            if(speed <= 0.1f)  // Once the speed goes below certain factor initiate Countdown before you "Fail"
             {
                 StartCoroutine("CountdownForStop");
                 Debug.Log("Movement Halted");
             }
         }
     }
-    IEnumerator CountdownForStop()
+    IEnumerator CountdownForStop() // The Countdown for the Movement check, it will not trigger UNLESS after 2sec of being Still
     {
         yield return new WaitForSeconds(2);
         if(speed < 0.01f)
