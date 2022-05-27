@@ -30,7 +30,7 @@ public class CameraFollow : MonoBehaviour
     void SetupStart()
     {
         player = GameObject.FindWithTag("Player");
-        transform.position = new Vector3(24, 5, -50);
+        transform.position = new Vector3(60, 15, -60);
         transform.localEulerAngles = Vector3.zero;
     }
 
